@@ -1,0 +1,43 @@
+SQL INTERVIEW QUESTIONS — THEORETICAL ANSWERS
+
+1. What is GROUP BY?
+GROUP BY is a SQL clause used to organize rows into groups based on one or more columns. It allows aggregate functions like COUNT, SUM, AVG, etc., to be applied to each group separately. This is useful for summarizing data, such as totals per category.
+
+2. Difference between WHERE and HAVING?
+WHERE filters rows before any grouping or aggregation occurs. It works on individual records.
+HAVING filters groups after aggregation has been performed. It works on grouped results.
+In short: WHERE = row-level filter, HAVING = group-level filter.
+
+3. How does COUNT(*) differ from COUNT(column)?
+COUNT(*) counts all rows, including those with NULL values.
+COUNT(column) counts only the rows where the specified column is not NULL.
+This helps when analyzing incomplete or optional data.
+
+4. Can you group by multiple columns?
+Yes. You can group by more than one column to create nested groupings. This allows you to summarize data at multiple levels, such as counting customers per city within each country.
+
+5. What is ROUND() used for?
+ROUND() is a function used to round numeric values to a specified number of decimal places. It is commonly used to format results like averages, prices, or percentages for better readability.
+
+6. How do you find the highest salary by department?
+To find the highest salary per department, use the MAX() aggregate function along with GROUP BY on the department column. This summarizes the maximum value within each group.
+
+7. What is the default behavior of GROUP BY?
+By default, GROUP BY returns one row per group and sorts the result set by the grouped column(s) in ascending order. It summarizes data based on the grouping criteria.
+
+8. Explain AVG and SUM.
+AVG() calculates the average (mean) of numeric values in a column.
+SUM() adds up all numeric values in a column.
+Both are aggregate functions used to summarize data.
+
+9. How to count distinct values?
+To count distinct values in a column, use COUNT(DISTINCT column_name). This returns the number of unique entries, ignoring duplicates.
+
+10. What is an aggregate function?
+An aggregate function performs a calculation on a set of values and returns a single summary result. Common aggregate functions include:
+- COUNT() – total number of items
+- SUM() – total sum
+- AVG() – average value
+- MAX() – highest value
+- MIN() – lowest value
+These are essential for data analysis and reporting.
